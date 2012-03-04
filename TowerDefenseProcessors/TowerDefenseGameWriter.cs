@@ -34,7 +34,7 @@ namespace TowerDefenseProcessors
                 // build the name of a non-templated type
                 readerText += "+" + shortTypeName + "Reader";
             }
-            readerText += ", TowerDefenseGameDataWindows";
+            readerText += ", TowerDefenseDataWindows";
 
             // replace the suffix name on the Xbox 360
             // -- since the processor runs on Windows, it needs to reference 
@@ -54,7 +54,7 @@ namespace TowerDefenseProcessors
         {
             Type type = typeof(T);
 
-            string typeText = type.FullName + ", TowerDefenseGameDataWindows";
+            string typeText = type.FullName + ", TowerDefenseDataWindows";
 
             // replace the suffix name on the Xbox 360
             // -- since the processor runs on Windows, it needs to reference 

@@ -53,7 +53,7 @@ namespace TowerDefenseProcessors
             output.Write(value.Name);
             output.WriteObject(value.Dimensions);
             output.WriteObject(value.TileSize);
-            output.WriteObject(value.TextureName);
+            output.Write(value.TextureName);
             output.WriteObject(value.BaseLayer);
             output.WriteObject(value.ObjectLayer);
 

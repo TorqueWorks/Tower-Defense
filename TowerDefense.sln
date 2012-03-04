@@ -8,7 +8,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TowerDefense", "TowerDefens
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TowerDefenseContent", "TowerDefense\TowerDefenseContent\TowerDefenseContent.contentproj", "{4A998029-6CA5-4A20-9967-64B88394C2FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TowerDefenseData", "TowerDefenseData\TowerDefenseData.csproj", "{754EA833-9E0F-498C-8E5C-D67BEE009990}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TowerDefenseDataWindows", "TowerDefenseData\TowerDefenseDataWindows.csproj", "{754EA833-9E0F-498C-8E5C-D67BEE009990}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TowerDefenseProcessors", "TowerDefenseProcessors\TowerDefenseProcessors.csproj", "{C20E1C45-FD75-415E-8D3D-B2E711A529CE}"
 	ProjectSection(ProjectDependencies) = postProject

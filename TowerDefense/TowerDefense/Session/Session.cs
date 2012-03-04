@@ -32,25 +32,28 @@ namespace TowerDefense
 
         #endregion //Singleton
 
-        #region Map
+        #region Level
 
         /// <summary>
-        /// Change the current map.
+        /// Change the current level.
         /// </summary>
-        /// <param name="aContentName">The asset name of the new map.</param>
-        public static void ChangeMap(string aContentName)
+        /// <param name="aContentName">The asset name of the new level.</param>
+        public static void ChangeLevel(string aContentName)
         {
-            string lMapContentName = aContentName;
-            if (!lMapContentName.StartsWith(@"Maps\"))
-            { //All maps should be in the Maps content location
-                lMapContentName = Path.Combine(@"Maps", lMapContentName);
+            string lLevelContentName = aContentName;
+            if (!lLevelContentName.StartsWith(@"Levels\"))
+            { //All levels should be in the Levels content location
+                lLevelContentName = Path.Combine(@"Levels", lLevelContentName);
             }
 
-            //Load the map
-            //TODO: Load the map
+            //Load the level
+            ContentManager lContent = mSingleton.mScreenManager.Game.Content;
+            Level lLevel = lContent.Load<Level>(lLevelContentName).Clone() as Level;
+
+            TileEngine.SetLevel(lLevel);
         }
 
-        #endregion //Map
+        #endregion //Level
 
         #region User Interface Data
 
@@ -156,9 +159,32 @@ namespace TowerDefense
         public static void Draw(GameTime aGameTime)
         {
             //TODO: Draw screen
+            mSingleton.DrawScreen(aGameTime);
+
             mSingleton.mHud.Draw();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="aGameTime"></param>
+        private void DrawScreen(GameTime aGameTime)
+        {
+            SpriteBatch lSpriteBatch = mScreenManager.SpriteBatch;
+
+            lSpriteBatch.Begin();
+            //Draw the background/ground tiles
+            if (TileEngine.Level.Texture != null)
+            {
+                TileEngine.DrawLayers(lSpriteBatch, true, false);
+            }
+            //Draw the foreground objects
+            if (TileEngine.Level.Texture != null)
+            {
+                TileEngine.DrawLayers(lSpriteBatch, false, true);
+            }
+            lSpriteBatch.End();
+        }
 
         #endregion //Drawing
 
@@ -186,8 +212,8 @@ namespace TowerDefense
             //Create new singleton
             mSingleton = new Session(aScreenManager, aGameplayScreen);
 
-            //Set up initial map
-            ChangeMap(aGameStartDescription.MapContentName);
+            //Set up initial level
+            ChangeLevel(aGameStartDescription.LevelContentName);
 
         }
 

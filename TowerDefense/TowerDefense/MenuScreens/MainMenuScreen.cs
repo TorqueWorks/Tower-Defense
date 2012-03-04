@@ -6,6 +6,7 @@ using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using TowerDefenseData;
 #endregion
 
 namespace TowerDefense
@@ -198,8 +199,7 @@ namespace TowerDefense
             }
 
             ContentManager lContent = ScreenManager.Game.Content;
-            //TODO: Loading screen here
-            //LoadScreen.Load(ScreenManager, true, new GameplayScreen(lContent.Load<GameStartDescription>("MainGameDescription")));
+            LoadingScreen.Load(ScreenManager, true, new GameplayScreen(lContent.Load<GameStartDescription>("MainGameDescription")));
         }
 
         /// <summary>

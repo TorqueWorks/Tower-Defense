@@ -12,19 +12,19 @@ namespace TowerDefenseData
     public class GameStartDescription
     {
 
-        #region Map
+        #region Level
 
-        private string mMapContentName;
+        private string mLevelContentName;
         /// <summary>
-        /// The content name of the map for the new game.
+        /// The content name of the level for the new game.
         /// </summary>
-        public string MapContentName
+        public string LevelContentName
         {
-            get { return mMapContentName; }
-            set { mMapContentName = value; }
+            get { return mLevelContentName; }
+            set { mLevelContentName = value; }
         }
 
-        #endregion //Map
+        #endregion //Level
 
         #region Content Type Reader
 
@@ -41,7 +41,7 @@ namespace TowerDefenseData
                     aDesc = new GameStartDescription();
                 }
 
-                aDesc.MapContentName = input.ReadString();
+                aDesc.LevelContentName = input.ReadString();
 
                 return aDesc;
             }

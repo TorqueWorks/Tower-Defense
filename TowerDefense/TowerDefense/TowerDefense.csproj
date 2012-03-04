@@ -112,6 +112,7 @@
     <Compile Include="GameScreens\Hud.cs" />
     <Compile Include="InputManager.cs" />
     <Compile Include="MenuScreens\ControlsScreen.cs" />
+    <Compile Include="MenuScreens\LoadingScreen.cs" />
     <Compile Include="MenuScreens\MainMenuScreen.cs" />
     <Compile Include="MenuScreens\MessageBoxScreen.cs" />
     <Compile Include="ScreenManager\MenuEntry.cs" />
@@ -121,6 +122,7 @@
     <Compile Include="ScreenManager\ScreenManager.cs" />
     <Compile Include="Session\SaveGameDescription.cs" />
     <Compile Include="Session\Session.cs" />
+    <Compile Include="TileEngine\TileEngine.cs" />
     <Compile Include="TowerDefense.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -128,13 +130,14 @@
     <Content Include="GameThumbnail.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\TowerDefenseData\TowerDefenseData.csproj">
+    <ProjectReference Include="..\..\TowerDefenseData\TowerDefenseDataWindows.csproj">
       <Project>{754EA833-9E0F-498C-8E5C-D67BEE009990}</Project>
-      <Name>TowerDefenseData</Name>
+      <Name>TowerDefenseDataWindows</Name>
     </ProjectReference>
     <ProjectReference Include="..\TowerDefenseContent\TowerDefenseContent.contentproj">
-      <Name>TowerDefenseContent</Name>
+      <Name>TowerDefenseContent %28Content%29</Name>
       <XnaReferenceType>Content</XnaReferenceType>
+      <Project>{4A998029-6CA5-4A20-9967-64B88394C2FE}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

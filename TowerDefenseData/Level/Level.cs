@@ -268,6 +268,7 @@ namespace TowerDefenseData
                 lLevel.TextureName = input.ReadString();
                 lLevel.Texture = input.ContentManager.Load<Texture2D>(
                     System.IO.Path.Combine(@"Textures\Levels", lLevel.TextureName));
+                lLevel.mTilesPerRow = lLevel.Texture.Width / lLevel.TileSize.X;
                 lLevel.BaseLayer = input.ReadObject<int[]>();
                 lLevel.ObjectLayer = input.ReadObject<int[]>();
 

@@ -60,6 +60,8 @@ namespace TowerDefense
 
             base.Initialize();
 
+            TileEngine.Viewport = mGraphics.GraphicsDevice.Viewport;
+
             mScreenManager.AddScreen(new MainMenuScreen());
         }
 

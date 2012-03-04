@@ -50,9 +50,9 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\TowerDefenseData\TowerDefenseData.csproj">
+    <ProjectReference Include="..\TowerDefenseData\TowerDefenseDataWindows.csproj">
       <Project>{754EA833-9E0F-498C-8E5C-D67BEE009990}</Project>
-      <Name>TowerDefenseData</Name>
+      <Name>TowerDefenseDataWindows</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

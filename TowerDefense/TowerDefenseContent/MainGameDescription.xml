@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <XnaContent>
-  <!-- TODO: replace this Asset with your own XML asset data. -->
-  <Asset Type="System.String"></Asset>
+  <Asset Type="TowerDefenseData.GameStartDescription">
+    <LevelContentName>Level001</LevelContentName>
+  </Asset>
 </XnaContent>

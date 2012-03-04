@@ -8,7 +8,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Content;
 #endregion
 
-namespace TowerDefense.MenuScreens
+namespace TowerDefense
 {
     /// <summary>
     /// The loading screen coordinates transitions between the menu system and the
